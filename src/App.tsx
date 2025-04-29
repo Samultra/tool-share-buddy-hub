@@ -24,7 +24,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <Router>
+      <Router basename="/tool-share-buddy-hub">
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/tools" element={<ToolsPage />} />
