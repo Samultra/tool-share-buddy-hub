@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from './pages/HomePage';
 import ToolsPage from "./pages/ToolsPage";
 import HowItWorksPage from "./pages/HowItWorksPage";
@@ -24,7 +24,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <Router basename="/tool-share-buddy-hub">
+      <Router>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/tools" element={<ToolsPage />} />
